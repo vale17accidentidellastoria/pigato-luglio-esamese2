@@ -9,6 +9,10 @@ app.get('/prova', function(req,res) {
 	res.json({funziona: "OK"})
 });
 
+const mondiali = require('./mondiali');
+
+app.use('/mondiali', mondiali);
+
 app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function() {
